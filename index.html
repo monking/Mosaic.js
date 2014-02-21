@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mosaic.js Demo</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="mosaic.js"></script>
+		<script>
+			$(function() {
+				$('section.gallery').mosaic();
+			});
+		</script>
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+			header, section, article {
+				display: block;
+			}
+			header {
+				margin: 0 0 2em 0;
+			}
+			section {
+				position: relative;
+			}
+			article {
+				width: 100px;
+				height: 100px;
+				background-color: gray;
+				color: white;
+			}
+			article:after {
+				font-size: 2em;
+				font-weight: bold;
+				text-align: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			article.x2-2 {
+				width: 204px;
+				height: 204px;
+			}
+			article.x2-1 {
+				width: 204px;
+				height: 100px;
+			}
+			article.x1-2 {
+				width: 100px;
+				height: 204px;
+			}
+			article.x3-3 {
+				width: 308px;
+				height: 308px;
+			}
+			.x1-1:after { content: "1x1"; line-height: 100px; }
+			.x1-2:after { content: "1x2"; line-height: 204px; }
+			.x2-1:after { content: "2x1"; line-height: 100px; }
+			.x2-2:after { content: "2x2"; line-height: 204px; }
+			.x3-3:after { content: "3x3"; line-height: 308px; }
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Mosaic.js Demo</h1>
+			<p>A masonry layout engine whose first priority is eliminating gaps. Get
+				the source at <a href="https://github.com/monking/Mosaic.js" target="_blank">github.com/monking/Mosaic.js</a>.</p>
+		</header>
+		<section class="gallery">
+			<article class="x1-2">01</article>
+			<article class="x2-2">02</article>
+			<article class="x1-1">03</article>
+			<article class="x1-2">04</article>
+			<article class="x1-1">05</article>
+			<article class="x2-1">06</article>
+			<article class="x3-3">07</article>
+			<article class="x1-1">08</article>
+			<article class="x1-2">09</article>
+			<article class="x1-1">10</article>
+			<article class="x1-1">11</article>
+			<article class="x1-1">12</article>
+			<article class="x1-1">13</article>
+			<article class="x1-1">14</article>
+			<article class="x1-1">15</article>
+			<article class="x2-2">16</article>
+			<article class="x1-1">17</article>
+			<article class="x2-2">18</article>
+			<article class="x1-1">19</article>
+			<article class="x2-2">20</article>
+			<article class="x2-2">21</article>
+			<article class="x1-1">22</article>
+			<article class="x1-1">23</article>
+			<article class="x2-1">24</article>
+			<article class="x1-1">25</article>
+			<article class="x2-1">26</article>
+			<article class="x1-1">27</article>
+			<article class="x1-1">28</article>
+			<article class="x1-1">29</article>
+			<article class="x1-1">30</article>
+			<article class="x1-1">31</article>
+		</section>
+	</body>
+</html>
