@@ -15,6 +15,7 @@ class Mosaic
 	BEFORE_UPDATE   : 'mosaic-before-update'
 	AFTER_UPDATE    : 'mosaic-after-items'
 	REDRAW_CANCELED : 'mosaic-redraw-canceled'
+	BEFORE_MEASURE  : 'mosaic-before-measure'
 
 	constructor: (options = {}) ->
 		@options =
@@ -69,6 +70,7 @@ class Mosaic
 
 	redraw: (force = false) ->
 		@drawing = true
+		$(@).trigger @BEFORE_MEASURE
 		newContainerFixedSize = @options.container[@dimensions.fixed]()
 
 		if @containerSize.fixed isnt newContainerFixedSize or force

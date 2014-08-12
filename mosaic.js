@@ -21,6 +21,8 @@ A masonry layout of items emphasizing filling gaps over order.
 
     Mosaic.prototype.REDRAW_CANCELED = 'mosaic-redraw-canceled';
 
+    Mosaic.prototype.BEFORE_MEASURE = 'mosaic-before-measure';
+
     function Mosaic(options) {
       if (options == null) {
         options = {};
@@ -92,6 +94,7 @@ A masonry layout of items emphasizing filling gaps over order.
         force = false;
       }
       this.drawing = true;
+      $(this).trigger(this.BEFORE_MEASURE);
       newContainerFixedSize = this.options.container[this.dimensions.fixed]();
       if (this.containerSize.fixed !== newContainerFixedSize || force) {
         this.items = [];
